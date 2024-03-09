@@ -4,6 +4,7 @@ function adicionar() {
     const idAleatorio = Math.floor(Math.random()*1000);
     if (amigo.value === '') {
         alert('Por favor, digie um nome válido');
+        return;
     } else {
         if (listaAmigos.textContent === '') {
             listaAmigos.innerHTML += `<a onclick="remover(event)" href="#" id="${amigo.value}${idAleatorio}" >${amigo.value}</a>`;

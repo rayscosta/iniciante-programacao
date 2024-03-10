@@ -40,6 +40,10 @@ function elementoAleatorio(array) {
 function gerarArrayAleatório() {
     let listaAmigos = document.getElementById('lista-amigos');
     let arrayListaAmigos = listaAmigos.textContent.split(',');
+    if (arrayListaAmigos.length < 4) {
+        alert('Núemro mínimo de participantes deve ser 4');
+        return;
+    }
     let arrayAleatorio = [];
     while (arrayAleatorio.length < arrayListaAmigos.length) {
         let elemento = elementoAleatorio(arrayListaAmigos);
